@@ -5,7 +5,7 @@ const styles = {
     primary: '#a80038',
     secondary: '#fd0054',
     text: '#2b2024',
-    textSubtle: '#aba0a4',
+    textSubtle: '#bbb0b4',
     white: '#fff',
   },
   fonts: {
