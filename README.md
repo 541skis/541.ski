@@ -1,6 +1,6 @@
 # 541.ski
 
-> One mountain, one ski.
+> One mountain—one ski.
 
 ## Development Setup
 
