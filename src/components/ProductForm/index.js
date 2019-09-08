@@ -26,7 +26,7 @@ const ProductForm = ({ product }) => {
           option={option}
         />
       ))}
-      <Flex alignItems="center" justifyContent="flex-end" mt={3}>
+      <Flex alignItems="center" justifyContent="flex-end" mt={[3, null, 1]}>
         <Text fontWeight="bold" mr={3}>
           ${variant.price}
         </Text>
@@ -38,6 +38,7 @@ const ProductForm = ({ product }) => {
             setAdding(false);
             setAdded(true);
           }}
+          type="button"
         >
           {adding ? 'Adding...' : 'Add to Cart'}
         </Button>
