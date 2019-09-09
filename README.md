@@ -17,8 +17,10 @@
 - [x] design & build our story page
 - [x] design & build product page
 - [x] design & build cart page
-- [ ] style out of stock product
+- [ ] fix no products in cart flash
+- [ ] make products in cart clickable
+- [ ] show image for selected variant
 - [ ] enhance & verify structured data
-- [ ] add adobos
+- [ ] add Adobos
 - [ ] test all the things
 - [ ] launch 🚀

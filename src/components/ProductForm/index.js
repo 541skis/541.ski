@@ -30,24 +30,27 @@ const ProductForm = ({ product }) => {
         <Text fontWeight="bold" mr={3}>
           ${variant.price}
         </Text>
-        <Button
-          disabled={adding}
-          onClick={async () => {
-            setAdding(true);
-            await addItemToCart(variant.shopifyId);
-            setAdding(false);
-            setAdded(true);
-          }}
-          type="button"
-        >
-          {adding ? 'Adding...' : 'Add to Cart'}
-        </Button>
+        {variant.availableForSale ? (
+          <Button
+            disabled={adding}
+            onClick={async () => {
+              setAdding(true);
+              await addItemToCart(variant.shopifyId);
+              setAdding(false);
+              setAdded(true);
+            }}
+            type="button"
+          >
+            {adding ? 'Adding...' : 'Add to Cart'}
+          </Button>
+        ) : (
+          <p>Currently out of stock.</p>
+        )}
         {added && (
           <Box as={Link} ml={3} to="/cart" variant="link">
             View Cart
           </Box>
         )}
-        {!variant.availableForSale && <p>This Product is out of Stock!</p>}
       </Flex>
     </Flex>
   );
