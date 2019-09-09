@@ -1,26 +1,43 @@
-import React, { useContext } from 'react';
-import LineItem from './LineItem';
+import React, { useContext, useState } from 'react';
+import { Button, Card, Flex, Link, Text } from 'rebass';
+import { Link as GatsbyLink } from 'gatsby';
 import AppContext from '../../context/AppContext';
+import LineItem from './LineItem';
 
 const Cart = () => {
   const { cart } = useContext(AppContext);
+  const [isCheckingOut, setIsCheckingOut] = useState(false);
+
+  if (!cart.lineItems.length) {
+    return (
+      <Text variant="intro">
+        It&rsquo;s empty!{' '}
+        <Link as={GatsbyLink} to="/">
+          View products
+        </Link>
+      </Text>
+    );
+  }
 
   return (
-    <div>
-      {cart.lineItems.map(item => (
-        <LineItem key={item.id.toString()} item={item} />
-      ))}
-      <h2>Subtotal</h2>
-      <p>$ {cart.subtotalPrice}</p>
-      <br />
-      <h2>Taxes</h2>
-      <p>$ {cart.totalTax}</p>
-      <br />
-      <h2>Total</h2>
-      <p>$ {cart.totalPrice}</p>
-      <br />
-      <a href={cart.webUrl}>Check out</a>
-    </div>
+    <>
+      <Card pb={3} px={3} variant="card.light">
+        {cart.lineItems.map(item => (
+          <LineItem key={item.id} item={item} />
+        ))}
+      </Card>
+      <Flex justifyContent="flex-end" pt={4}>
+        <Button
+          disabled={isCheckingOut}
+          onClick={() => {
+            setIsCheckingOut(true);
+            window.location = cart.webUrl;
+          }}
+        >
+          {isCheckingOut ? 'Redirecting...' : 'Check Out'}
+        </Button>
+      </Flex>
+    </>
   );
 };
 

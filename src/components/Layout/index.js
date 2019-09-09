@@ -73,10 +73,11 @@ class Layout extends React.Component {
   removeItemFromCart = async id => {
     const { storeContext } = this.props;
     const { cart } = this.state;
-
-    this.setState({
-      cart: await storeContext.client.checkout.removeLineItems(cart.id, [id]),
-    });
+    let newCart = { ...cart };
+    newCart.lineItems = cart.lineItems.filter(i => i.id !== id);
+    this.setState({ cart: newCart });
+    newCart = await storeContext.client.checkout.removeLineItems(cart.id, [id]);
+    this.setState({ cart: newCart });
   };
 
   updateItemInCart = async (id, quantity = 1) => {

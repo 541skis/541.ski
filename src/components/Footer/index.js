@@ -10,6 +10,7 @@ const FooterItemLink = ({ icon, text, to }) => (
       href={to}
       sx={{
         alignItems: 'center',
+        color: 'text',
         display: 'flex',
         fontSize: 1,
         letterSpacing: '0.075em',

@@ -36,7 +36,7 @@ const ProductGrid = () => (
       `
     ).allShopifyProduct.edges.map(({ node: product }) => (
       <Box key={product.id} mb={5} px={3} width={[1, null, 1 / 3]}>
-        <Card as={Link} to={`/${product.handle}`} variant="card">
+        <Card as={Link} to={`/${product.handle}`} variant="card.dark">
           <Heading as="h3" p={4} textAlign="center">
             {product.title}
           </Heading>

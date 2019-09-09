@@ -1,3 +1,5 @@
+/* eslint-disable sort-keys */
+
 const styles = {
   colors: {
     background: '#fbf9fa',
@@ -35,6 +37,11 @@ const variants = {
       px: 4,
       py: 3,
     },
+    simple: {
+      bg: 'inherit',
+      color: 'inherit',
+      cursor: 'pointer',
+    },
   },
   text: {
     heading: { fontWeight: 'bold', lineHeight: 'heading' },
@@ -53,13 +60,20 @@ const variants = {
   },
   variants: {
     card: {
-      bg: 'black',
-      borderRadius: 'default',
-      boxShadow: 'card',
-      color: 'white',
-      display: 'block',
-      overflow: 'hidden',
+      dark: {
+        variant: 'variants.card.light',
+        bg: 'black',
+        color: 'white',
+      },
+      light: {
+        bg: 'white',
+        borderRadius: 'default',
+        boxShadow: 'card',
+        display: 'block',
+        overflow: 'hidden',
+      },
     },
+    cardLight: {},
     link: { color: 'primary', textDecoration: 'underline' },
     navLink: {
       '&>a': {

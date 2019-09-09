@@ -16,8 +16,8 @@
 - [x] design & build landing page
 - [x] design & build our story page
 - [x] design & build product page
-- [ ] design & build cart page
-- [ ] enhance & verify structured data
+- [x] design & build cart page
 - [ ] get feedback & add additional tasks
+- [ ] enhance & verify structured data
 - [ ] test all the things
 - [ ] launch 🚀

@@ -22,9 +22,8 @@ const ProductPage = ({ data: { shopifyProduct: product } }) => (
     <Content>
       <ProductForm product={product} />
       {product.images.map(image => (
-        <Card>
+        <Card key={image.id} variant="card.dark">
           <Image
-            key={image.id}
             alt={product.title}
             fluid={image.localFile.childImageSharp.fluid}
           />
@@ -41,9 +40,7 @@ ProductPage.propTypes = {
       images: PropTypes.arrayOf(
         PropTypes.shape({
           localFile: PropTypes.shape({
-            childImageSharp: PropTypes.shape({
-              fluid: PropTypes.string,
-            }),
+            childImageSharp: PropTypes.shape({}),
           }),
         })
       ),
