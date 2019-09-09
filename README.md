@@ -17,7 +17,8 @@
 - [x] design & build our story page
 - [x] design & build product page
 - [x] design & build cart page
-- [ ] get feedback & add additional tasks
+- [ ] style out of stock product
 - [ ] enhance & verify structured data
+- [ ] add adobos
 - [ ] test all the things
 - [ ] launch 🚀
