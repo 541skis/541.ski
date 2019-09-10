@@ -19,8 +19,8 @@
 - [x] design & build cart page
 - [x] show image for selected variant
 - [x] fix no products in cart flash
-- [ ] make products in cart clickable
 - [ ] enhance & verify structured data
-- [ ] add Adobos
+- [ ] add appropriate product images
+- [ ] set up shipping & payment info
 - [ ] test all the things
 - [ ] launch 🚀
