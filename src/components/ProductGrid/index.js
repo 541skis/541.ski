@@ -39,10 +39,7 @@ const ProductGrid = () => (
           <Heading as="h3" p={4} textAlign="center">
             {product.title}
           </Heading>
-          <Image
-            alt={product.title}
-            fluid={product.images[0].localFile.childImageSharp.fluid}
-          />
+          <Image fluid={product.images[0].localFile.childImageSharp.fluid} />
         </Card>
       </Box>
     ))}

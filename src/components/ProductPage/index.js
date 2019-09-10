@@ -69,18 +69,12 @@ const ProductPage = ({ data: { shopifyProduct: product } }) => {
         </Flex>
         {variant.image ? (
           <Card variant="card.dark">
-            <Image
-              alt={`${product.title} (${variant.title}) photo`}
-              fluid={variant.image.localFile.childImageSharp.fluid}
-            />
+            <Image fluid={variant.image.localFile.childImageSharp.fluid} />
           </Card>
         ) : (
-          product.images.map((image, i) => (
+          product.images.map(image => (
             <Card key={image.id} variant="card.dark">
-              <Image
-                alt={`${product.title} photo ${i + 1}`}
-                fluid={image.localFile.childImageSharp.fluid}
-              />
+              <Image fluid={image.localFile.childImageSharp.fluid} />
             </Card>
           ))
         )}
