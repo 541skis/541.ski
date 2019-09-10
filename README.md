@@ -17,9 +17,9 @@
 - [x] design & build our story page
 - [x] design & build product page
 - [x] design & build cart page
+- [x] show image for selected variant
 - [ ] fix no products in cart flash
 - [ ] make products in cart clickable
-- [ ] show image for selected variant
 - [ ] enhance & verify structured data
 - [ ] add Adobos
 - [ ] test all the things

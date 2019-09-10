@@ -17,7 +17,6 @@ const ProductGrid = () => (
                 createdAt
                 images {
                   id
-                  originalSrc
                   localFile {
                     childImageSharp {
                       fluid(maxWidth: 1000) {
