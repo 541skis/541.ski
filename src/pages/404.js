@@ -3,7 +3,7 @@ import Seo from '../components/Seo';
 
 const FourOhFourPage = () => (
   <>
-    <Seo />
+    <Seo noIndex />
     404
   </>
 );

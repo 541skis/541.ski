@@ -33,6 +33,7 @@ class Layout extends React.Component {
       totalTax: null,
       webUrl: null,
     },
+    cartIsLoading: true,
   };
 
   async componentDidMount() {
@@ -56,7 +57,7 @@ class Layout extends React.Component {
       localStorage.setItem(STORAGE_SHOPIFY_CART_ID, cart.id);
     }
 
-    this.setState({ cart });
+    this.setState({ cart, cartIsLoading: false });
   }
 
   addItemToCart = async (id, quantity = 1) => {
@@ -93,7 +94,7 @@ class Layout extends React.Component {
 
   render() {
     const { children } = this.props;
-    const { cart } = this.state;
+    const { cart, cartIsLoading } = this.state;
 
     return (
       <ThemeProvider theme={theme}>
@@ -101,6 +102,7 @@ class Layout extends React.Component {
           value={{
             addItemToCart: this.addItemToCart,
             cart,
+            cartIsLoading,
             removeItemFromCart: this.removeItemFromCart,
             updateItemInCart: this.updateItemInCart,
           }}

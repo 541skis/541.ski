@@ -18,7 +18,7 @@
 - [x] design & build product page
 - [x] design & build cart page
 - [x] show image for selected variant
-- [ ] fix no products in cart flash
+- [x] fix no products in cart flash
 - [ ] make products in cart clickable
 - [ ] enhance & verify structured data
 - [ ] add Adobos
