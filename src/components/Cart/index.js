@@ -5,10 +5,10 @@ import AppContext from '../../context/AppContext';
 import LineItem from './LineItem';
 
 const Cart = () => {
-  const { cart, cartIsLoading } = useContext(AppContext);
+  const { cart } = useContext(AppContext);
   const [isCheckingOut, setIsCheckingOut] = useState(false);
 
-  if (cartIsLoading) return null;
+  if (cart.isLoading) return null;
 
   if (!cart.lineItems.length) {
     return (
