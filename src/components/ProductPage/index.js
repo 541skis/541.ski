@@ -6,7 +6,7 @@ import { Link, graphql } from 'gatsby';
 import AppContext from '../../context/AppContext';
 import Content from '../Content';
 import Header from '../Header';
-import Seo from '../Seo';
+import Seo from '../SEO';
 import VariantSelector from './VariantSelector';
 
 const ProductPage = ({ data: { shopifyProduct: product } }) => {
@@ -17,15 +17,22 @@ const ProductPage = ({ data: { shopifyProduct: product } }) => {
 
   return (
     <>
-      <Seo title={product.title} />
+      <Seo
+        product={{
+          available: variant.availableForSale,
+          description: product.description,
+          imagePath: variant.image.localFile.childImageSharp.fluid.src,
+          name: product.title,
+          price: variant.price,
+          sku: variant.sku,
+        }}
+        title={product.title}
+      />
       <Header hero={product.title} />
       <Content>
-        <Text
-          as="p"
-          dangerouslySetInnerHTML={{ __html: product.descriptionHtml }}
-          pb={5}
-          variant="intro"
-        />
+        <Text as="p" pb={5} variant="intro">
+          {product.description}
+        </Text>
         <Flex
           flexDirection={['column', null, 'row']}
           justifyContent="space-between"
@@ -118,6 +125,7 @@ ProductPage.propTypes = {
             PropTypes.shape({ name: PropTypes.string, value: PropTypes.string })
           ),
           shopifyId: PropTypes.string,
+          sku: PropTypes.string,
           title: PropTypes.string,
         })
       ),
@@ -128,7 +136,7 @@ ProductPage.propTypes = {
 export const query = graphql`
   query($handle: String!) {
     shopifyProduct(handle: { eq: $handle }) {
-      descriptionHtml
+      description
       handle
       id
       images {
@@ -168,6 +176,7 @@ export const query = graphql`
           value
         }
         shopifyId
+        sku
         title
       }
     }

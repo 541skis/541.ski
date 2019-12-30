@@ -35,11 +35,19 @@ const ProductGrid = () => (
       `
     ).allShopifyProduct.edges.map(({ node: product }) => (
       <Box key={product.id} mb={5} px={3} width={[1, null, 1 / 3]}>
-        <Card as={Link} to={`/${product.handle}`} variant="card.dark">
+        <Card
+          as={Link}
+          pb={3}
+          px={3}
+          to={`/${product.handle}`}
+          variant="card.dark"
+        >
           <Heading as="h3" p={4} textAlign="center">
             {product.title}
           </Heading>
-          <Image fluid={product.images[0].localFile.childImageSharp.fluid} />
+          <Box sx={{ borderRadius: 'default', overflow: 'hidden' }}>
+            <Image fluid={product.images[0].localFile.childImageSharp.fluid} />
+          </Box>
         </Card>
       </Box>
     ))}

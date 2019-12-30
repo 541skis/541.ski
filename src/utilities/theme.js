@@ -7,7 +7,7 @@ const styles = {
     primary: '#a80038',
     secondary: '#fd0054',
     text: '#2b2024',
-    textSubtle: '#bbb0b4',
+    textSubtle: '#aba0a4',
     white: '#fff',
   },
   fonts: {
@@ -28,6 +28,7 @@ const variants = {
   buttons: {
     primary: {
       '&:disabled': { cursor: 'default', opacity: 0.3 },
+      '&:hover': { bg: 'secondary' },
       bg: 'primary',
       borderRadius: 'default',
       color: 'background',
@@ -36,11 +37,14 @@ const variants = {
       fontWeight: 'bold',
       px: 4,
       py: 3,
+      transition: 'background-color 0.2s',
     },
     simple: {
+      '&:hover': { color: 'secondary' },
       bg: 'inherit',
       color: 'inherit',
       cursor: 'pointer',
+      transition: 'color 0.2s',
     },
   },
   text: {
@@ -74,11 +78,18 @@ const variants = {
       },
     },
     cardLight: {},
-    link: { color: 'primary', textDecoration: 'underline' },
+    link: {
+      '&:hover': { color: 'secondary' },
+      color: 'primary',
+      textDecoration: 'underline',
+      transition: 'color 0.2s',
+    },
     navLink: {
       '&>a': {
-        '&.active': { opacity: 0.3 },
+        '&.active': { opacity: 0.3, textDecoration: 'underline' },
+        '&:hover': { textDecoration: 'underline' },
         fontSize: 1,
+        fontWeight: 'bold',
         letterSpacing: '0.075em',
         ml: 4,
         py: 3,

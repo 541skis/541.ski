@@ -7,12 +7,12 @@ import Content from '../Content';
 import Logo from '../../images/logo.svg';
 import NavLink from '../NavLink';
 
-const Header = ({ hero }) => {
+const Header = ({ hero, ...props }) => {
   const { cart } = useContext(AppContext);
   const itemCount = cart.lineItems.reduce((acc, i) => acc + i.quantity, 0);
 
   return (
-    <Content>
+    <Content {...props}>
       <Flex alignItems="center" as="nav" justifyContent="space-between" pt={3}>
         <Link as={GatsbyLink} to="/">
           <h1>
@@ -20,8 +20,8 @@ const Header = ({ hero }) => {
           </h1>
         </Link>
         <Box>
-          <NavLink to="/our-story">Our Story</NavLink>
-          <NavLink to="/cart">Cart {!!itemCount && `(${itemCount})`}</NavLink>
+          <NavLink to="/our-story/">Our Story</NavLink>
+          <NavLink to="/cart/">Cart {!!itemCount && `(${itemCount})`}</NavLink>
         </Box>
       </Flex>
       {hero && (

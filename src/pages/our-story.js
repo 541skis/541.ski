@@ -2,12 +2,12 @@ import React from 'react';
 import { Text } from 'rebass';
 import Content from '../components/Content';
 import Header from '../components/Header';
-import Seo from '../components/Seo';
+import Seo from '../components/SEO';
 
 const OurStoryPage = () => (
   <>
     <Seo title="Our Story" />
-    <Header hero="Our Story" />
+    <Header hero="Our Story" mb={4} />
     <Content>
       <Text as="p" variant="paragraph">
         541 was started out necessity and a love of skiing. Owners, Brad Duffy
@@ -19,7 +19,7 @@ const OurStoryPage = () => (
         teamed up to create a ski to fill the void. The Adobo was
         born&mdash;541&rsquo;s flagship ski. Every design is built, tested and
         proven on the year-round slopes of Mt. Hood, OR by the owners. If we
-        don&rsquo;t like it, we don&rsquo;t make it! Try a pair and push as hard
+        don&rsquo;t like it, we don&rsquo;t sell it! Try a pair and push as hard
         as you can. 541 skis will not let you&nbsp;down.
       </Text>
     </Content>

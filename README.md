@@ -12,15 +12,6 @@
 
 ## Todo
 
-- [x] create initial store
-- [x] design & build landing page
-- [x] design & build our story page
-- [x] design & build product page
-- [x] design & build cart page
-- [x] show image for selected variant
-- [x] fix no products in cart flash
-- [ ] enhance & verify structured data
-- [ ] add appropriate product images
 - [ ] set up shipping & payment info
 - [ ] test all the things
 - [ ] launch 🚀

@@ -10,24 +10,10 @@ import theme from '../../utilities/theme';
 import { IS_BROWSER, STORAGE_SHOPIFY_CART_ID } from '../../utilities/constants';
 
 class Layout extends React.Component {
-  static propTypes = {
-    children: PropTypes.node.isRequired,
-    storeContext: PropTypes.shape({
-      client: PropTypes.shape({
-        checkout: PropTypes.shape({
-          addLineItems: PropTypes.func,
-          create: PropTypes.func,
-          fetch: PropTypes.func,
-          removeLineItems: PropTypes.func,
-          updateLineItems: PropTypes.func,
-        }),
-      }),
-    }).isRequired,
-  };
-
-  state = {
-    cart: { isLoading: true, lineItems: [] },
-  };
+  constructor(props) {
+    super(props);
+    this.state = { cart: { isLoading: true, lineItems: [] } };
+  }
 
   async componentDidMount() {
     const { storeContext } = this.props;
@@ -128,5 +114,20 @@ class Layout extends React.Component {
     );
   }
 }
+
+Layout.propTypes = {
+  children: PropTypes.node.isRequired,
+  storeContext: PropTypes.shape({
+    client: PropTypes.shape({
+      checkout: PropTypes.shape({
+        addLineItems: PropTypes.func,
+        create: PropTypes.func,
+        fetch: PropTypes.func,
+        removeLineItems: PropTypes.func,
+        updateLineItems: PropTypes.func,
+      }),
+    }),
+  }).isRequired,
+};
 
 export default withStoreContext(Layout);

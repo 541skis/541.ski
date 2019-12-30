@@ -5,7 +5,7 @@ import { Facebook, Instagram } from 'react-feather';
 import Content from '../Content';
 
 const FooterItemLink = ({ icon, text, to }) => (
-  <Box as="li" mx={3}>
+  <Box as="li" mr={[3, null, 0]} mx={[null, null, 3]}>
     <Link
       href={to}
       sx={{
@@ -13,8 +13,8 @@ const FooterItemLink = ({ icon, text, to }) => (
         color: 'text',
         display: 'flex',
         fontSize: 1,
+        fontWeight: 'bold',
         letterSpacing: '0.075em',
-        py: 3,
         textDecoration: 'none',
         textTransform: 'uppercase',
       }}
@@ -32,7 +32,7 @@ FooterItemLink.propTypes = {
 
 const Footer = () => (
   <Content my={5}>
-    <Flex as="ul" justifyContent="center">
+    <Flex as="ul" justifyContent={[null, null, 'center']}>
       <FooterItemLink
         icon={<Instagram />}
         text="Instagram"

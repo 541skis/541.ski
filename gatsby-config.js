@@ -9,13 +9,13 @@ module.exports = {
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     {
-      resolve: 'gatsby-plugin-layout',
       options: { component: resolve('src/components/Layout') },
+      resolve: 'gatsby-plugin-layout',
     },
     {
       options: {
-        fonts: ['Lora:700', 'Open Sans:400,700'],
         display: 'swap',
+        fonts: ['Lora:700', 'Open Sans:400,700'],
       },
       resolve: 'gatsby-plugin-google-fonts',
     },
@@ -59,8 +59,16 @@ module.exports = {
     },
   ],
   siteMetadata: {
+    banner: '/images/banner.png',
+    datePublished: '2020-01-01',
     description:
       '541 skis are designed with a basic philosophy—ski all conditions and terrain with confidence and power. 541 skis are a true one quiver ski.',
-    title: '541 Skis',
+    facebook: '541skis',
+    instagram: '541skis',
+    language: 'en',
+    local: 'en_US',
+    logo: '/images/logo.png',
+    siteName: '541 Skis',
+    url: 'https://541.ski',
   },
 };

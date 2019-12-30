@@ -3,11 +3,11 @@ import { Text } from 'rebass';
 import Content from '../components/Content';
 import Header from '../components/Header';
 import ProductGrid from '../components/ProductGrid';
-import Seo from '../components/Seo';
+import Seo from '../components/SEO';
 
 const IndexPage = () => (
   <>
-    <Seo />
+    <Seo title="541 Skis" />
     <Header hero={<>One&nbsp;Mountain&mdash;One&nbsp;Ski</>} />
     <Content pb={5}>
       <Text as="p" variant="intro">
