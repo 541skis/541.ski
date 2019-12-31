@@ -32,7 +32,7 @@ FooterItemLink.propTypes = {
 
 const Footer = () => (
   <Content display={[null, 'flex']} justifyContent="space-between" my={5}>
-    <Flex as="ul" justifyContent="center">
+    <Flex as="ul">
       <FooterItemLink
         icon={<Instagram />}
         text="Instagram"
@@ -44,7 +44,7 @@ const Footer = () => (
         to="https://www.facebook.com/541skis/"
       />
     </Flex>
-    <Box mt={[4, 0]} textAlign="center">
+    <Box mt={[4, 0]}>
       &copy; 541 Sport LLC
     </Box>
   </Content>
