@@ -39,7 +39,7 @@ const ProductGrid = () => (
           as={Link}
           pb={3}
           px={3}
-          to={`/${product.handle}`}
+          to={`/${product.handle}/`}
           variant="card.dark"
         >
           <Heading as="h3" p={4} textAlign="center">
