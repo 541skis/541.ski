@@ -7,7 +7,7 @@ import Seo from '../components/SEO';
 const OurStoryPage = () => (
   <>
     <Seo title="Our Story" />
-    <Header hero="Our Story" mb={4} />
+    <Header hero="Our Story" />
     <Content>
       <Text as="p" variant="paragraph">
         541 was started out necessity and a love of skiing. Owners, Brad Duffy

@@ -2,12 +2,12 @@
 
 const styles = {
   colors: {
-    background: '#fbf9fa',
+    background: '#ebe9ea',
     black: '#000',
     primary: '#a80038',
     secondary: '#fd0054',
     text: '#2b2024',
-    textSubtle: '#aba0a4',
+    textSubtle: '#9b9094',
     white: '#fff',
   },
   fonts: {
