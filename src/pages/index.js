@@ -7,14 +7,13 @@ import Seo from '../components/SEO';
 
 const IndexPage = () => (
   <>
-    <Seo title="541 Skis" />
+    <Seo title="541 Skis — Shred both piste and powder" />
     <Header hero={<>One&nbsp;Mountain&mdash;One&nbsp;Ski</>} />
     <Content pb={5}>
       <Text as="p" variant="intro">
         541 skis are designed with a basic philosophy: ski all conditions and
-        terrain with confidence and power. These are truly one-quiver skis.
-        Every design will rip pow, shred crud and carve trenches
-        on&nbsp;groomers.
+        terrain with confidence and power. These are truly
+        one&#8209;quiver&nbsp;skis.
       </Text>
     </Content>
     <Content>

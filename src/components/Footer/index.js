@@ -1,11 +1,11 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import { Box, Flex, Link } from 'rebass';
-import { Facebook, Instagram } from 'react-feather';
+import { Facebook, Instagram, Linkedin, Twitter } from 'react-feather';
 import Content from '../Content';
 
 const FooterItemLink = ({ icon, text, to }) => (
-  <Box as="li" mr={[4, null, 0]} mx={[null, null, 3]}>
+  <Box as="li" mb={[4, null, 0]} mr={[null, null, 0]} mx={[null, null, 3]}>
     <Link
       href={to}
       sx={{
@@ -32,7 +32,11 @@ FooterItemLink.propTypes = {
 
 const Footer = () => (
   <Content my={5}>
-    <Flex as="ul" justifyContent={[null, null, 'center']}>
+    <Flex
+      as="ul"
+      flexDirection={['column', null, 'row']}
+      justifyContent={[null, null, 'center']}
+    >
       <FooterItemLink
         icon={<Instagram />}
         text="Instagram"
@@ -42,6 +46,16 @@ const Footer = () => (
         icon={<Facebook />}
         text="Facebook"
         to="https://www.facebook.com/541skis/"
+      />
+      <FooterItemLink
+        icon={<Linkedin />}
+        text="LinkedIn"
+        to="https://www.linkedin.com/company/541skis/"
+      />
+      <FooterItemLink
+        icon={<Twitter />}
+        text="Twitter"
+        to="https://twitter.com/541skis/"
       />
     </Flex>
     <Box

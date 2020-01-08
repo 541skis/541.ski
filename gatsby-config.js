@@ -62,13 +62,15 @@ module.exports = {
     banner: '/images/banner.png',
     datePublished: '2020-01-01',
     description:
-      '541 skis are designed with a basic philosophy—ski all conditions and terrain with confidence and power. 541 skis are a true one quiver ski.',
+      '541 skis are designed with a basic philosophy: ski all conditions and terrain with confidence and power. These are truly one-quiver skis.',
     facebook: '541skis',
     instagram: '541skis',
     language: 'en',
+    linkedin: '541skis',
     local: 'en_US',
     logo: '/images/logo.png',
     siteName: '541 Skis',
+    twitter: '541skis',
     url: 'https://541.ski',
   },
 };
