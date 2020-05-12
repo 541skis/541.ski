@@ -24,7 +24,7 @@ const Cart = () => {
   return (
     <>
       <Card pb={3} px={3} variant="card.light">
-        {cart.lineItems.map(item => (
+        {cart.lineItems.map((item) => (
           <LineItem key={item.id} item={item} />
         ))}
       </Card>

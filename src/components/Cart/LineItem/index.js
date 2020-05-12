@@ -11,7 +11,7 @@ const LineItem = ({ item }) => {
       <Flex alignItems="center" flexWrap="wrap" justifyContent="flex-start">
         <Heading mr={3}>{item.title}</Heading>
         <Text color="textSubtle" fontSize={1}>
-          ({item.variant.selectedOptions.map(option => option.value)})
+          ({item.variant.selectedOptions.map((option) => option.value)})
         </Text>
       </Flex>
       <Flex alignItems="center" flexWrap="wrap" justifyContent="flex-end">

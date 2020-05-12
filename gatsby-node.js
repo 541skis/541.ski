@@ -13,7 +13,7 @@ exports.createPages = ({ graphql, actions }) => {
         }
       }
     }
-  `).then(result =>
+  `).then((result) =>
     result.data.allShopifyProduct.edges.forEach(({ node }) =>
       createPage({
         component: path.resolve('src/components/ProductPage/index.js'),

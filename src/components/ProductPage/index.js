@@ -38,11 +38,13 @@ const ProductPage = ({ data: { shopifyProduct: product } }) => {
           justifyContent="space-between"
           mb={5}
         >
-          {product.options.map(option => (
+          {product.options.map((option) => (
             <VariantSelector
               key={option.id.toString()}
               onChange={({ target }) =>
-                setVariant(product.variants.find(v => v.title === target.value))
+                setVariant(
+                  product.variants.find((v) => v.title === target.value)
+                )
               }
               option={option}
             />
@@ -79,7 +81,7 @@ const ProductPage = ({ data: { shopifyProduct: product } }) => {
             <Image fluid={variant.image.localFile.childImageSharp.fluid} />
           </Card>
         ) : (
-          product.images.map(image => (
+          product.images.map((image) => (
             <Card key={image.id} variant="card.dark">
               <Image fluid={image.localFile.childImageSharp.fluid} />
             </Card>

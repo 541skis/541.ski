@@ -9,7 +9,7 @@ const VariantSelector = ({ onChange, option }) => (
       {option.name}
     </Label>
     <Select id={option.name} name={option.name} onChange={onChange}>
-      {option.values.map(value => (
+      {option.values.map((value) => (
         <option key={`${option.name}-${value}`}>{value}</option>
       ))}
     </Select>
