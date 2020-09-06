@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactHlsPlayer from 'react-hls-player';
+import ReactPlayer from 'react-player';
 import { Text } from 'rebass';
 import Content from '../components/Content';
 import Header from '../components/Header';
@@ -25,13 +25,7 @@ const StreamsPage = () => {
           </Text>
         )}
         {streamUrl && (
-          <ReactHlsPlayer
-            autoplay={false}
-            controls
-            height="auto"
-            url={streamUrl}
-            width="100%"
-          />
+          <ReactPlayer controls height="auto" url={streamUrl} width="100%" />
         )}
       </Content>
     </>
