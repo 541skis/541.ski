@@ -7,7 +7,7 @@ import Seo from '../components/Seo';
 import useStream from '../effects/use-stream';
 
 const StreamsPage = () => {
-  const { streamError, streamIsLoading, streamUrl } = useStream('mountain-cam');
+  const { streamError, streamIsLoading, streamUrl } = useStream('swifty-cam');
 
   return (
     <>
