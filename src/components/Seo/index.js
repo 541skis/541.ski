@@ -10,7 +10,7 @@ import getSocialUrls from './utilities/get-social-urls';
 import getStructuredBreadcrumbs from './utilities/get-structured-breadcrumbs';
 import ref from './utilities/ref';
 
-const SEO = ({ product, ...overrides }) => (
+const Seo = ({ product, ...overrides }) => (
   <MetadataContainer>
     {({ location, ...siteMetadata }) => {
       const data = { ...siteMetadata, ...overrides };
@@ -111,7 +111,7 @@ const SEO = ({ product, ...overrides }) => (
   </MetadataContainer>
 );
 
-SEO.propTypes = {
+Seo.propTypes = {
   product: PropTypes.shape({
     available: PropTypes.bool,
     description: PropTypes.string,
@@ -123,8 +123,8 @@ SEO.propTypes = {
   title: PropTypes.string.isRequired,
 };
 
-SEO.defaultProps = {
+Seo.defaultProps = {
   product: null,
 };
 
-export default SEO;
+export default Seo;

@@ -33,9 +33,10 @@ FooterItemLink.propTypes = {
 const Footer = () => (
   <Content my={5}>
     <Flex
+      alignItems="center"
       as="ul"
       flexDirection={['column', null, 'row']}
-      justifyContent={[null, null, 'center']}
+      justifyContent="center"
     >
       <FooterItemLink
         icon={<Instagram />}
@@ -58,12 +59,7 @@ const Footer = () => (
         to="https://twitter.com/541skis/"
       />
     </Flex>
-    <Box
-      color="textSubtle"
-      fontSize={1}
-      mt={4}
-      textAlign={[null, null, 'center']}
-    >
+    <Box color="textSubtle" fontSize={1} mt={4} textAlign="center">
       &copy; 541 Sport LLC
     </Box>
   </Content>

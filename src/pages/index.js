@@ -3,7 +3,7 @@ import { Text } from 'rebass';
 import Content from '../components/Content';
 import Header from '../components/Header';
 import ProductGrid from '../components/ProductGrid';
-import Seo from '../components/SEO';
+import Seo from '../components/Seo';
 
 const IndexPage = () => (
   <>

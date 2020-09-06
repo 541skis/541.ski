@@ -20,17 +20,13 @@ const Header = ({ hero, ...props }) => {
           </h1>
         </Link>
         <Box>
-          <NavLink to="/our-story/">Our Story</NavLink>
+          <NavLink to="/story/">Story</NavLink>
+          <NavLink to="/streams/">Streams</NavLink>
           <NavLink to="/cart/">Cart {!!itemCount && `(${itemCount})`}</NavLink>
         </Box>
       </Flex>
       {hero && (
-        <Heading
-          fontSize={[5, 6]}
-          pb={3}
-          pt={4}
-          textAlign={['left', null, 'center']}
-        >
+        <Heading fontSize={[5, 6]} pb={3} pt={4} textAlign="center">
           {hero}
         </Heading>
       )}

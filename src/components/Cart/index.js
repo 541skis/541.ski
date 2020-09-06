@@ -8,7 +8,9 @@ const Cart = () => {
   const { cart } = useContext(AppContext);
   const [isCheckingOut, setIsCheckingOut] = useState(false);
 
-  if (cart.isLoading) return null;
+  if (cart.isLoading) {
+    return <Text variant="intro">Loading cart&hellip;</Text>;
+  }
 
   if (!cart.lineItems.length) {
     return (

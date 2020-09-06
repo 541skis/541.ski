@@ -17,9 +17,9 @@ const styles = {
   },
   fontSizes: [12, 14, 16, 20, 24, 32, 48, 64, 96],
   fontWeights: { body: 400, bold: 700 },
-  lineHeights: { body: 1.7, heading: 1.25 },
+  lineHeights: { body: 1.8, heading: 1.25 },
   radii: { circle: 99999, default: 5 },
-  shadows: { card: 'rgba(14, 14, 33, 0.1) 0px 22px 44px 0px' },
+  shadows: { card: 'rgba(14, 14, 33, 0.05) 0px 22px 44px 0px' },
   sizes: { avatar: 48 },
   space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
 };
@@ -52,14 +52,11 @@ const variants = {
     intro: {
       fontSize: [3, 4],
       lineHeight: 'body',
-      textAlign: ['left', 'left', 'center'],
+      textAlign: 'center',
     },
     paragraph: {
       fontSize: [2, 3],
       lineHeight: 'body',
-      maxWidth: 675,
-      mx: 'auto',
-      textAlign: ['left', null, 'justify'],
     },
   },
   variants: {
@@ -77,7 +74,6 @@ const variants = {
         overflow: 'hidden',
       },
     },
-    cardLight: {},
     link: {
       '&:hover': { color: 'secondary' },
       color: 'primary',

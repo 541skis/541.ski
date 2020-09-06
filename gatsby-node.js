@@ -16,7 +16,7 @@ exports.createPages = ({ graphql, actions }) => {
   `).then((result) =>
     result.data.allShopifyProduct.edges.forEach(({ node }) =>
       createPage({
-        component: path.resolve('src/components/ProductPage/index.js'),
+        component: path.resolve('src/components/ProductLayout/index.js'),
         context: { handle: node.handle },
         path: `/${node.handle}/`,
       })

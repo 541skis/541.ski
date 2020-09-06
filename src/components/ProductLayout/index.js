@@ -6,10 +6,10 @@ import { Link, graphql } from 'gatsby';
 import AppContext from '../../context/AppContext';
 import Content from '../Content';
 import Header from '../Header';
-import Seo from '../SEO';
+import Seo from '../Seo';
 import VariantSelector from './VariantSelector';
 
-const ProductPage = ({ data: { shopifyProduct: product } }) => {
+const ProductLayout = ({ data: { shopifyProduct: product } }) => {
   const { addItemToCart } = useContext(AppContext);
   const [adding, setAdding] = useState(false);
   const [added, setAdded] = useState(false);
@@ -92,7 +92,7 @@ const ProductPage = ({ data: { shopifyProduct: product } }) => {
   );
 };
 
-ProductPage.propTypes = {
+ProductLayout.propTypes = {
   data: PropTypes.shape({
     shopifyProduct: PropTypes.shape({
       descriptionHtml: PropTypes.string,
@@ -185,4 +185,4 @@ export const query = graphql`
   }
 `;
 
-export default ProductPage;
+export default ProductLayout;
